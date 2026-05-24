@@ -1,0 +1,13 @@
+.card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+  .card img {
+    object-fit: cover;
+  }
+
+button {
+  min-width: 40px;
+}

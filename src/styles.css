@@ -1,0 +1,22 @@
+.success-snackbar {
+  --mdc-snackbar-container-color: #198754;
+  --mat-mdc-snack-bar-button-color: white;
+  --mdc-snackbar-supporting-text-color: white;
+}
+
+.error-snackbar {
+  --mdc-snackbar-container-color: #dc3545;
+  --mat-mdc-snack-bar-button-color: white;
+  --mdc-snackbar-supporting-text-color: white;
+}
+html {
+  --mat-form-field-container-height: 40px;
+  --mat-form-field-label-text-line-height: 40px;
+}
+
+/* Optional helper to make material table buttons look smaller */
+.btn-sm-custom {
+  padding: 0 8px !important;
+  line-height: 28px !important;
+  font-size: 12px !important;
+}

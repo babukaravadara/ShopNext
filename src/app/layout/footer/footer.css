@@ -1,0 +1,46 @@
+.footer {
+  background: #212529;
+  color: white;
+  padding: 50px 0 20px;
+  margin-top: 50px;
+}
+
+  .footer h4,
+  .footer h5 {
+    margin-bottom: 20px;
+  }
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+
+  .footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+    .footer-links a:hover {
+      color: white;
+      padding-left: 5px;
+    }
+
+hr {
+  border-color: #555;
+}
+
+.text-center {
+  text-align: center;
+}
+
+@media(max-width:768px) {
+
+  .footer {
+    text-align: center;
+  }
+}

@@ -1,0 +1,32 @@
+.card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+  .card:hover {
+    transform: translateY(-5px);
+  }
+
+  .card img {
+    height: 220px;
+    object-fit: cover;
+  }
+
+.badge {
+  padding: 10px 15px;
+  font-size: 14px;
+}
+
+h2 {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+@media(max-width:768px) {
+
+  .card img {
+    height: 180px;
+  }
+}

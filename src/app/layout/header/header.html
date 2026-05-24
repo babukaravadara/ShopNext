@@ -1,0 +1,97 @@
+<mat-toolbar class="navbar-toolbar">
+
+  <div class="navbar-container">
+
+    <!-- Logo -->
+    <a mat-button
+       routerLink="/home"
+       class="brand-logo">
+
+      ShopNest
+
+    </a>
+
+    <span class="spacer"></span>
+
+    <div class="nav-links">
+
+      <ng-container *ngIf="!authService.isLoggedIn()">
+
+        <a mat-button routerLink="/login">
+          Login
+        </a>
+
+        <a mat-button routerLink="/register">
+          Register
+        </a>
+
+      </ng-container>
+
+      <ng-container *ngIf="authService.isLoggedIn()">
+
+        <a mat-button routerLink="/products">
+          Products
+        </a>
+
+        <a mat-button routerLink="/orders">
+          My Orders
+        </a>
+
+        <a mat-button routerLink="/cart">
+          Cart
+        </a>
+
+        <!-- Admin -->
+        <button mat-button
+                [matMenuTriggerFor]="adminMenu"  *ngIf="authService.getRole() === 'admin'">
+
+          Admin
+
+          <mat-icon>
+            keyboard_arrow_down
+          </mat-icon>
+
+        </button>
+
+        <mat-menu #adminMenu="matMenu">
+
+          <a mat-menu-item
+             routerLink="/admin/manageproducts">
+
+            <mat-icon>
+              inventory_2
+            </mat-icon>
+
+            <span>Manage Products</span>
+
+          </a>
+
+          <a mat-menu-item
+             routerLink="/admin/manageuser">
+
+            <mat-icon>
+              group
+            </mat-icon>
+
+            <span>Manage Users</span>
+
+          </a>
+
+        </mat-menu>
+
+        <!-- Logout -->
+        <button mat-raised-button
+                class="logout-btn"
+                (click)="logout()">
+
+          Logout
+
+        </button>
+
+      </ng-container>
+
+    </div>
+
+  </div>
+
+</mat-toolbar>

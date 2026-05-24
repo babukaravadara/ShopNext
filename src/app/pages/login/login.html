@@ -1,0 +1,29 @@
+<div class="row justify-content-center">
+
+  <div class="col-md-4">
+
+    <div class="card p-4">
+      <h3 class="mb-3">Login</h3>
+      <form [formGroup]="LoginForm" (ngSubmit)="login()">
+        <!-- Added formControlName="email" -->
+        <input type="email"
+               formControlName="email"
+               class="form-control mb-3"
+               placeholder="Email">
+
+        <!-- Added formControlName="password" -->
+        <input type="password"
+               formControlName="password"
+               class="form-control mb-3"
+               placeholder="Password">
+
+        <button class="btn btn-dark" [disabled]="LoginForm.invalid">
+          Login
+        </button>
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
