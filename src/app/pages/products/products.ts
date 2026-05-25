@@ -52,5 +52,32 @@ export class Products {
       }
     });
   }
+   BuyProduct(product: any) {
+    if (!this.authService.isLoggedIn()) {
+      this.router.navigate(['/login']);
+      return;
+    }
+    const cartItem = {
+      productId: product.id,
+      productName: product.name,
+      price: product.price,
+      quantity: 1,
+      imageUrl: product.image
+    };
+
+    this.cartService.addToCart(cartItem).subscribe({
+      next: (res) => {
+        if (res.success) {
+           this.router.navigate([
+            '/checkout'
+          ]);
+        }
+        
+      },
+      error: (err) => {
+        console.log(err);
+      }
+    });
+  }
 }
 

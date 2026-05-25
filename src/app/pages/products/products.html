@@ -21,7 +21,7 @@
 
         </h6>
 
-        <button class="btn btn-dark w-100 mb-2">Buy Now</button>
+        <button class="btn btn-dark w-100 mb-2" (click)="BuyProduct(product)">Buy Now</button>
         <button class="btn btn-outline-primary w-100" (click)="addToCart(product)">
           Add To Cart
         </button>
@@ -32,4 +32,10 @@
 
   </div>
 
+</div>
+ <!-- Empty Cart State Definition -->
+ <div *ngIf="products && products.length === 0">
+  <div class="alert alert-warning py-4 text-center">
+    <h4 class="alert-heading">No product found</h4>
+  </div>
 </div>
